@@ -28,5 +28,14 @@ const game = new (class {
       `
       )
       .join("")}`;
+
+    const innerWord = this.htmlElements.word.innerText.replace(/\n/g, "");
+
+    if (innerWord === this.selectedWord) {
+      this.htmlElements.finalMessage.innerText = "Congratulations! You won!";
+      this.htmlElements.popup.style.display = "flex";
+    }
   }
 })();
+
+game.displayWord();
