@@ -17,6 +17,10 @@ const game = new (class {
   correctLetters: string[] = [];
   wrongLetters: string[] = [];
 
+  constructor() {
+    this.displayWord();
+  }
+
   displayWord() {
     this.htmlElements.word.innerHTML = `${this.selectedWord
       .split("")
@@ -37,5 +41,3 @@ const game = new (class {
     }
   }
 })();
-
-game.displayWord();
